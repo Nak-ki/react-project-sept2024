@@ -2,6 +2,7 @@ import {SubmitHandler, useForm} from "react-hook-form";
 import {useAppDispatch} from "../../hooks/useAppDispatch.ts";
 import {authActions} from "../../store/slices/authSlice.ts";
 import {useNavigate} from "react-router-dom";
+import css from './Login.module.css'
 
 const LogIn = () => {
 
@@ -16,10 +17,10 @@ const LogIn = () => {
     }
     return (
         <div>
-            <form onSubmit={handleSubmit(toLogin)}>
-                <input type="text" placeholder={'username'} {...register('username')}/>
-                <input type="text" placeholder={'password'} {...register('password')}/>
-                <button>login</button>
+            <form className={css.login} onSubmit={handleSubmit(toLogin)}>
+                <input className={css.input1} type="text" placeholder={'Username'} {...register('username')}/>
+                <input className={css.input2} type="text" placeholder={'Password'} {...register('password')}/>
+                <button className={css.btn}>Login</button>
             </form>
         </div>
     );

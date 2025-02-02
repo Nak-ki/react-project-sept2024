@@ -1,0 +1,28 @@
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+    text-shadow: cornflowerblue 1px 0 10px;
+}
+.img{
+    width: 400px;
+    height: 400px;
+    border: 5px solid cornflowerblue;
+    border-radius: 10px;
+}
+.tags{
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.p{
+    text-decoration: cornflowerblue underline;
+    font-weight: bold;
+}
+.p:hover{
+    color: darkblue;
+    cursor: pointer;
+
+}

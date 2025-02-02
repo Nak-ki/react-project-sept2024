@@ -1,0 +1,32 @@
+.pagination{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+}
+
+.prev{
+    cursor: pointer;
+    padding: 10px;
+    background: cornflowerblue;
+    color: whitesmoke;
+    border: cornflowerblue 2px solid;
+    font-size: 18px;
+}
+.next{
+    cursor: pointer;
+    padding: 10px;
+    background: cornflowerblue;
+    color: whitesmoke;
+    border: cornflowerblue 2px solid;
+    font-size: 18px;
+}
+
+:hover.prev{
+    background: darkblue;
+    border: 2px solid darkblue;
+}
+:hover.next{
+    background: darkblue;
+    border: 2px solid darkblue;
+}

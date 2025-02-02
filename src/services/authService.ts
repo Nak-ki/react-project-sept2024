@@ -3,6 +3,8 @@ import {apiService} from "./apiService.ts";
 import {urls} from "../constants/constants.ts";
 import {IUserWithTokens} from "../interfaces/IUserWithTokens.tsx";
 import {ITokenPair} from "../interfaces/ITokenPair.tsx";
+import {IRes} from "../types/responeType.tsx";
+
 
 
 
@@ -15,6 +17,9 @@ const authService = {
         const {data} = await apiService.post(urls.auth.login, user);
         this.setTokens(data)
         return data
+    },
+    me(): IRes<IUserWithTokens> {
+        return apiService.get(urls.auth.me)
     },
     // async refresh(): Promise<void> {
     //     const refresh = this.getRefreshToken();

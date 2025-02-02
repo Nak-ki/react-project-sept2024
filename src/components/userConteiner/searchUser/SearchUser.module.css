@@ -1,0 +1,30 @@
+.mainForm{
+    width: 100%;
+}
+.form{
+    height: 40px;
+    width: 100px;
+    display: flex;
+}
+
+.search{
+    padding: 5px;
+    border: 2px solid cornflowerblue;
+}
+
+.button{
+    padding: 10px;
+    display: flex;
+    align-content: center;
+    margin-left: 10px;
+    border: 2px solid cornflowerblue;
+    color: whitesmoke;
+    background: cornflowerblue;
+    cursor: pointer;
+
+}
+
+:hover.button{
+    background: darkblue;
+    border: 2px solid darkblue;
+}

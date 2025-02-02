@@ -1,0 +1,29 @@
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input1{
+    padding: 10px;
+    margin-top: 4px;
+    border: cornflowerblue solid 2px;
+}
+.input2{
+    padding: 10px;
+    margin-top: 4px;
+    border: cornflowerblue solid 2px;
+
+}
+.btn{
+    padding: 10px;
+    margin-top: 4px;
+    color: whitesmoke;
+    border: cornflowerblue solid 2px;
+    background: cornflowerblue;
+}
+:hover.btn{
+    background: darkblue;
+    border: 2px solid darkblue;
+}

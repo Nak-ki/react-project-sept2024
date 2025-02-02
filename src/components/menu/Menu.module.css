@@ -1,0 +1,61 @@
+.mainMenu{
+    display: flex;
+    justify-content: center;
+    width: 99%;
+    position: sticky;
+    top: 0;
+
+}
+
+.log{
+    font-size: 35px;
+    font-weight: bold;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+}
+:hover.log{
+   cursor: grabbing;
+}
+
+.menu {
+    font-size: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    position: sticky;
+}
+
+.links{
+    /*display: flex;*/
+    justify-content: space-around;
+    margin-left: 200px;
+    font-size: 40px;
+}
+:hover.link1{
+    color: darkblue;
+    text-shadow: cornflowerblue 1px 0 10px;
+}
+:hover.link2{
+    color: darkblue;
+    text-shadow: cornflowerblue 1px 0 10px;
+}
+:hover.link3{
+    color: darkblue;
+    text-shadow: cornflowerblue 1px 0 10px;
+}
+
+.link1{
+    margin-left: 20px ;
+    color: cornflowerblue;
+}
+.link2{
+    margin-left: 20px ;
+    color: cornflowerblue;
+}
+.link3{
+    margin-left: 20px ;
+    color: cornflowerblue;
+}

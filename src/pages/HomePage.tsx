@@ -1,11 +1,9 @@
-import {useAppSelector} from "../hooks/useAppSelector.ts";
+import {Home} from "../components/Home/Home.tsx";
 
 const HomePage = () => {
-    const {currentUser} = useAppSelector(state => state.auth)
-    console.log(currentUser)
     return (
         <div>
-            <p>You are not authorized, please log in.</p>
+            <Home/>
         </div>
     );
 };

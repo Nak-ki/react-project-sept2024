@@ -1,0 +1,8 @@
+.user{
+    font-size: 20px;
+}
+.user:hover{
+    color: cornflowerblue;
+    cursor: pointer;
+    text-shadow: cornflowerblue 1px 0 10px;
+}

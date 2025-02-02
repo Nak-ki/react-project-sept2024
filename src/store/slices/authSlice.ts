@@ -3,6 +3,7 @@ import {AxiosError} from "axios";
 import {IUserWithTokens} from "../../interfaces/IUserWithTokens.tsx";
 import {authService} from "../../services/authService.ts";
 
+
 interface IState {
     loginError: string
     currentUser: IUserWithTokens
@@ -27,6 +28,21 @@ const login = createAsyncThunk<IUserWithTokens, { user : {username:string, passw
     }
 )
 
+const me = createAsyncThunk<IUserWithTokens, void>(
+    "authSlice/me",
+    async (_, thunkAPI) => {
+        try {
+            const {data} = await authService.me()
+            return data
+        }
+        catch (e) {
+            const error = e as AxiosError
+            return thunkAPI.rejectWithValue(error.response.data)
+        }
+
+    }
+)
+
 const authSlice = createSlice({
     name: "authSlice",
     initialState,
@@ -39,9 +55,13 @@ const authSlice = createSlice({
         .addCase(login.rejected, state => {
             state.loginError = "Wrong name or password"
         })
+        .addCase(me.fulfilled, (state, action) => {
+            state.currentUser = action.payload
+        })
         .addMatcher(isFulfilled(login), state => {
             state.loginError = null
         })
+
 })
 
 const {reducer: authReducer, actions} = authSlice
@@ -49,6 +69,7 @@ const {reducer: authReducer, actions} = authSlice
 const authActions = {
     ...actions,
     login,
+    me
 }
 
 export {

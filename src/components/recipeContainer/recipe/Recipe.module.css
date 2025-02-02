@@ -1,0 +1,17 @@
+.recipe{
+    font-size: 20px;
+}
+
+.p:hover{
+    color: cornflowerblue;
+    cursor: pointer;
+    text-shadow: cornflowerblue 1px 0 10px;
+}
+
+.tags{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
